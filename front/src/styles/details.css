@@ -1,0 +1,33 @@
+.details{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+@media (min-width: 768px) {
+    .details{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+        padding: 5rem;
+    }
+    
+}
+
+.details__price{
+    font-size: 1.8rem;
+}
+
+.details__brand, .details__price{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.details__description{
+    font-size: 1.4rem;
+}
+
+.details__name{
+    font-weight: 500;
+    font-size: 1.6rem;
+}
