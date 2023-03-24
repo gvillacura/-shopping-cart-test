@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { IconContext } from "react-icons";
+import { HiStar } from "react-icons/hi2";
 import { useParams } from "react-router-dom";
 import { CartListContext } from "../context/CartListContext";
 
@@ -18,6 +20,17 @@ const Details = () => {
         <h3 className="details__name">{productsFiltered.name}</h3>
         <p className="details__description">{productsFiltered.description}</p>
         <h3 className="details__price">{productsFiltered.price}</h3>
+        <div className="detailes__options">
+          <div className="details__rating">
+            <IconContext.Provider value={{ className: "details__icon" }}>
+              <HiStar />
+            </IconContext.Provider>
+            <p className="details__text">{productsFiltered.rating}</p>
+          </div>
+          <p className="details__numReviews">
+            Views: {productsFiltered.numReviews}
+          </p>
+        </div>
         <button
           disabled={productsFiltered.countInStock === 0 ? true : false}
           onClick={() => {

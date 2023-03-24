@@ -1,14 +1,14 @@
 .details{
-    max-width: 1200px;
-    width: 95%;
     margin: 0 auto;
+    max-width: 1200px;
     padding: 2rem;
+    width: 95%;
 }
 @media (min-width: 768px) {
     .details{
         display: grid;
-        grid-template-columns: 2fr 3fr;
         gap: 2rem;
+        grid-template-columns: 2fr 3fr;
         padding: 5rem;
     }
     
@@ -19,8 +19,8 @@
 }
 
 .details__brand, .details__price{
-    text-transform: uppercase;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .details__description{
@@ -28,6 +28,23 @@
 }
 
 .details__name{
-    font-weight: 500;
     font-size: 1.6rem;
+    font-weight: 500;
 }
+
+.detailes__options{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+ }
+
+ .details__numReviews, .details__text{
+     font-size: 1.4rem;
+    margin: 0;
+ }
+
+ .details__rating{
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+ }

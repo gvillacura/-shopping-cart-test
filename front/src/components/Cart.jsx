@@ -15,9 +15,9 @@ const Cart = () => {
           <div className="cart__product" key={product._id}>
             <img src={`http://localhost:5000/${product.image}`} alt="product" />
             <div>
-              <h3>{product.brand}</h3>
-              <h3>{product.name}</h3>
-              <h3>{product.price}</h3>
+              <h3 className="cart__brand">{product.brand}</h3>
+              <h3 className="cart__name">{product.name}</h3>
+              <h3 className="card__price">{product.price}</h3>
             </div>
             <div className="amount">
               <div className="amount__modify">

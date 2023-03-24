@@ -10,6 +10,7 @@ const CartResume = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const { cartList } = useContext(CartListContext);
 
+  //Para obtener el monto total a pagar.
   useEffect(() => {
     if (!isCartLoading) {
       let totalValue = 0;

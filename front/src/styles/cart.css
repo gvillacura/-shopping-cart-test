@@ -20,6 +20,15 @@
     background: #ffffff
 }
 
+.cart__price, .cart__brand{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cart__name{
+    font-weight: 400;
+}
+
 .resume{
     height: fit-content;
     display: flex;

@@ -36,7 +36,24 @@
 
 .options{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
 }
+
+ .options__info{
+    display: flex;
+    gap: 1.5rem;
+ }
+
+ .options__numReviews, .rating__text{
+    margin: 0;
+    font-size: 1.2rem;
+ }
+
+ .rating{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+ }
 
 

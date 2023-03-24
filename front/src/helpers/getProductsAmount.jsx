@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { CartListContext } from "../context/CartListContext";
 
+// Retorna la cantidad total de productos agregados
 const GetProductsAmount = () => {
   const [productsAmount, setProductsAmount] = useState(0);
   const { cartList } = useContext(CartListContext);

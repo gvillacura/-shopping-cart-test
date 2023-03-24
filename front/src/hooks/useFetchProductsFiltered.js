@@ -4,6 +4,7 @@ import { getListOfProducts } from "../helpers/getListOfProducts";
 const useFetchProductsFiltered = (id) => {
   const [productsFiltered, setProductsFiltered] = useState([]);
 
+  // Consigue la información de un producto según id.
   useEffect(() => {
     const listOfProducts = getListOfProducts();
     listOfProducts.then((products) => {

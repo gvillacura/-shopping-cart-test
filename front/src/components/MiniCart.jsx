@@ -13,16 +13,14 @@ const MiniCart = () => {
       <Link to="/">
         <h3 className="minicart__products">Products</h3>
       </Link>
-      <div className="minicart__resume">
+      <Link className="minicart__resume" to="/cart">
         <div className="minicart__amount">
           <p className="minicart__text"> {productsAmount}</p>
         </div>
         <IconContext.Provider value={{ className: "minicart__icon" }}>
-          <Link to="/cart">
-            <HiShoppingCart />
-          </Link>
+          <HiShoppingCart />
         </IconContext.Provider>
-      </div>
+      </Link>
     </div>
   );
 };

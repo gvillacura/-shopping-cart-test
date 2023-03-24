@@ -1,19 +1,18 @@
-import { useState, useEffect, useContext } from "react";
-import { ProductsContext } from "../context/ProductsContext";
+import { useState, useEffect } from "react";
 import { getListOfProducts } from "../helpers/getListOfProducts";
 
 const useFetchProducts = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { setProductsList } = useContext(ProductsContext);
 
+  // Consigue la lista de todos los productos.
   useEffect(() => {
     const listOfProducts = getListOfProducts();
     listOfProducts.then((resp) => {
       setProducts(resp);
       setIsLoading(false);
     });
-  }, [setProductsList]);
+  }, []);
 
   return { products, isLoading };
 };

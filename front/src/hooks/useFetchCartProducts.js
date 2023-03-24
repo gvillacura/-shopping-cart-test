@@ -1,15 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { getListOfProducts } from "../helpers/getListOfProducts";
 import { CartListContext } from "../context/CartListContext";
-import { ProductsContext } from "../context/ProductsContext";
 
 const useFetchCartProducts = () => {
   const [productsCartFiltered, setProductsCartFiltered] = useState([]);
   const [isCartLoading, setIsCartLoading] = useState(true);
 
   const { cartList } = useContext(CartListContext);
-  const { setProductsList } = useContext(ProductsContext);
 
+  // Consigue la lista de productos que están agregados al carrito de compras.
   useEffect(() => {
     const listOfProducts = getListOfProducts();
     let newProducts = [];
@@ -22,10 +21,9 @@ const useFetchCartProducts = () => {
         return newProducts;
       });
       setProductsCartFiltered(newProducts);
-      setProductsList(newProducts);
       setIsCartLoading(false);
     });
-  }, [cartList, setProductsList]);
+  }, [cartList]);
 
   return { productsCartFiltered, isCartLoading };
 };
